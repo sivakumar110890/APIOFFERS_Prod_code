@@ -1,0 +1,133 @@
+#Audit Timezone
+j4u.offer.audit.timzone=GMT+01
+
+##back Pressure sleeping time in ms, when volt overload
+back.pressure.sleeping.time=1000
+## j4u.offer Kafka Publisher properties
+kafka.publisher.bootstrap.servers=172.25.36.242:9093,172.25.24.234:9094
+kafka.publisher.acks=all
+kafka.publisher.retries=2
+kafka.publisher.batch.size=16384
+kafka.publisher.linger.ms=20
+kafka.publisher.buffer.memory=33554432
+kafka.publisher.queue.buffer.size=100000
+kafka.publisher.queue.wait.time.in.ms=500
+kafka.publisher.counter.variable=10
+kafka.publisher.idle.time.in.min=5
+## Kafka topic information
+mpesa.topic=APICONSUMER:GAPICONSUMER:8
+#async timout setting
+mpesa.async.timeout=60000
+j4u.offer.sub.menu.prod.type=Voice:J4U Voice,Data:J4U Data,Integrated:J4U Integrated & SMS,Hourly:J4U Hourly Data,Social:J4U Social Media,MorningOffer:J4U Morning Offer
+j4u.offer.refresh.flag.map=Voice:V,Data:D,Integrated:I,Hourly:H,Soical:S,MorningOffer:M
+j4u.offer.ml.sub.menu.template=ML_SUB_MENU
+j4u.offer.ml.hourly2offer.menu.template=ML_HOURLY_DATA_2OFFER_MENU
+j4u.offer.ml.hourly1offer.menu.template=ML_HOURLY_DATA_1OFFER_MENU
+ocs.query.bal.topic=QBAACONSUMER
+mpesa.query.bal.topic=MQBAACONSUMER
+#reward topic
+j4u.offer.rewardspublisher.topic.name=REWARDSAACONSUMER
+## msisdn id (phone number) manipulation props
+j4u.offer.msisdn.length=12
+j4u.offer.msisdn.countryCode=243
+##locationOffers
+locationmodule.query.service.get.cellid=http://172.25.24.234:8090/resultxml.xml
+SSL_CERTIFICATE_CHECK_ENABLED=false
+AUTHENTICATION_REQUIRED=false
+audit.timzone=GMT-10:00
+location.request.timeoutMillis=500
+location.connection.timeoutMillis=100
+
+##Channel for NewAppIntegration
+j4u.enhanced.flow.channel=APP
+j4u.request.sub.category.map=Onnet Voice:Onnet,Allnet Voice:allnet,Int Zone A Voice:International,Int Zone B Voice:International,Int Zone C Voice:International
+
+## DB procedures for location offers
+#location.module.get.poolid=P_GET_REGION_ID_BY_CELL_ID
+location.module.get.offer=ENBA_P_J4U_ML_LOCATION_OFFER
+location.module.get.offer.count=ENBA_P_GET_OFFER_COUNT_BY_REGION_ID
+
+j4u.procedure.api.log.insert=ECMP_T_J4U_API_LOG.insert
+##j4u.procedure.get.msisdn.ccr.detail=USSD_P_ERED_T_REDUCED_CCR_SELECT
+j4u.procedure.get.msisdn.ccr.detail=USSD_P_ERED_GET_USER_INFO_WITH_PED
+# J4U Timeout Patch - Caching
+ecmp.procedure.get.product.price=ECMP_P_GET_PRODUCT_PRICELIST
+j4u.location.module.get.offer.info=ECMP_P_LOCATION_PROD_INFO_LIST
+j4u.offer.prodInfo.proc.name=ECMP_P_PROD_INFO_LIST
+j4u.ecmp.social.prodinfo.proc=ECMP_P_SOCIAL_PRODINFO
+j4u.prodInfo.prodType.name=ECMP_P_EXTENDED_PROD_TYPE
+location.module.get.poolid=ENBA_P_GET_REGION_ID_BY_CELL_ID_LIST
+
+
+##Openet props
+j4u.offer.op.rewardspublisher.topic.name=REWARDSAACONSUMER
+J4u.offer.op.ccs.query.bal.topic=QBAACONSUMER
+j4u.offer.msisdnrange.length=8
+J4u.offer.enable.multi.cs=1
+J4u.offer.cs.msisdnrange.query=ECMP_P_GET_CS_FOR_RANGE
+J4u.offer.cs.msisdn.query=ECMP_P_GET_CS_FOR_MSISDN
+
+##J4U social Bundle
+j4u.offers.ml.social.query.offer.proc=J4U_P_ML_SOCIAL_OFFER 
+j4u.offers.social.prod.info.proc=J4U_P_ML_SOCIAL_PRODINFO 
+j4u.ecmp.social.prodids.proc=ECMP_P_SOCIAL_PRODIDS;
+
+j4u.offers.ml.social.offer.byrank.proc=USSD_P_ML_SOCIAL_OFFER_SELECT;
+ussd.ml.social.offer.byexp.proc=USSD_P_ML_SOCIAL_OFFER_SELECT_BY_EXPVAL
+
+
+
+##J4U Morning Offer procedures
+j4u.offers.morning.offer.prodinfo=ECMP_P_MORNING_OFFER_INFOj4u.offer.prodInfo.proc.name
+j4u.offers.get.morning.offer.proc=ENBA_P_GET_MORNING_OFFER
+
+##Morning offer window Configuration
+j4u.offers.morning.offer.window.start=08:00:00.000000
+j4u.offers.morning.offer.window.end=23:00:00.000000
+
+##NewAPIIntegration
+j4u.pl.aa.ml.offer.sub.category=USSD_P_ML_AA_OFFER_SUB_CAT
+j4u.location.subtype.module.get.offer.info=ENBA_P_J4U_ML_LOCATION_OFFER_SUB_CAT
+j4u.offers.cache.get.proc=P_GET_OFFER_FROM_CACHE
+j4u.offers.cache.insert.proc=P_UPSERT_OFFER_TO_CACHE
+
+
+##PED Feature
+##ped procedures
+PED_P_AVAILABLE_PLAYS_SELECT=PED_P_AVAILABLE_PLAYS_SELECT
+PED_P_AVAILABLE_PLAYS_DOD1_SELECT=PED_P_AVAILABLE_PLAYS_DOD1_SELECT
+PED_P_AVAILABLE_PLAYS_DOD1_UPDATE=PED_P_AVAILABLE_PLAYS_DOD1_UPDATE
+ERED_PLAY_ALLOCATION_HISTORY_SELECT=ERED_PLAY_ALLOCATION_HISTORY_SELECT
+ERED_PLAY_ALLOCATION_HISTORY_UPDATE=ERED_PLAY_ALLOCATION_HISTORY_UPDATE
+PED_PRIZE_HISTORY_PROC=PED_P_PRIZE_HISTORY
+PED_P_PLAY_HISTORY_SELECT=PED_P_PLAY_HISTORY_SELECT
+PED_P_GLOBAL_VARIABLES_SELECT=PED_P_GLOBAL_VARIABLES_SELECT
+PED_P_RANDOM_PRIZE_SELECT=PED_P_RANDOM_PRIZE_SELECT
+PED_P_PLAY_HISTORY_INSERT=PED_P_PLAY_HISTORY_ADD_AND_DELETE
+ECMP_T_PLAY_HISTORY_ECAP.insert=PED_P_ECMP_T_PLAY_HISTORY_ECAP_I
+PED_P_PRIZE_STATS_SELECT=PED_P_PRIZE_STATS_SELECT
+PED_P_PRIZE_LIBRARY_SELECT=PED_P_PRIZE_LIBRARY_SELECT
+PED_P_PRIZE_STATS_UPSERT=PED_P_PRIZE_STATS_UPSERT
+PED_P_PLAYED_COUNT_HISTORY_UPSERT=PED_P_PLAYED_COUNT_HISTORY_UPSERT
+PED_P_PLAYED_COUNT_HISTORY_SELECT=PED_P_PLAYED_COUNT_HISTORY_SELECT
+PED_P_PLAY_HISTORY_SELECT_APIOFFER=PED_P_PLAY_HISTORY_SELECT_APIOFFER
+
+#PED ELIGIBILITY
+ussd.reduced.ccr.get.info=USSD_P_ERED_GET_USER_INFO_WITH_PED
+## UAT Procedure to insert new RAG user in ECAP_RAG_CAT_FILE_LOAD_STG
+insert.raguser.cat.proc.name=ECAP_RAG_CAT_FILE_LOAD_STG.insert
+insert.saguser.cat.proc.name=ECAP_SAG_CAT_FILE_LOAD_STG.insert
+
+## PRODUCTION Procedure to insert new RAG user in ECAP_RAG_CAT_FILE_LOAD_STG
+#insert.raguser.cat.proc.name=ECAP_J4U.ECAP_RAG_CAT_FILE_LOAD_STG.insert
+
+##SMS
+sms.topic.name=SMSCONSUMER
+sms.optin.template=ML_RAG_SMS_OPT_IN
+sms.optout.template=ML_RAG_SMS_OPT_OUT
+
+ussd.rag.atl.reward.map=610873:50,610876:100,610878:150
+ussd.sag.atl.reward.map=610873:50,610876:100,610878:150
+
+blacklist.msisdn.procedure=ECMP_P_GET_OPENET_BLACKLIST_MSISDN
+blacklisting.msisdns.enabled=1

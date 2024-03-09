@@ -1,0 +1,10 @@
+back.pressure.sleeping.time=1000
+volt.ip.address=172.25.24.234
+volt.port=21216
+volt.username=j4uadmin
+volt.password=nimdau4j
+volt.reconnectOnConnectionLoss=True
+volt.clientAffinity=True
+volt.heavyweight=True
+volt.InitialConnectionRetryInterval=30000
+volt.maxConnectionRetryInterval=30000
